@@ -1,0 +1,13 @@
+.page-header {
+  min-height: 120px;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  padding-top: 30px;
+  padding-bottom: 35px;
+  color: $color-white-for-text;
+}
+
+.page-header__grid {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  gap: 40px;
+}

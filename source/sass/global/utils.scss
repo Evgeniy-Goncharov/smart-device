@@ -65,3 +65,13 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+body {
+  font-family: "PT Mono", "Arial", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $color-bg-white;
+  color: $color-black;
+}

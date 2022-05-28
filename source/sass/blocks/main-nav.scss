@@ -1,0 +1,22 @@
+.main-nav {
+  margin: auto;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 225px 225px;
+  gap: 30px;
+}
+
+.main-nav__link {
+  color: $color-white-for-text;
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    margin-right: 15px;
+  }
+}
