@@ -4,10 +4,56 @@
   padding-top: 30px;
   padding-bottom: 35px;
   color: $color-white-for-text;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    min-height: 70px;
+  }
 }
 
 .page-header__grid {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   gap: 40px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 35px 1fr;
+    padding-right: 15px;
+  }
+}
+
+.page-header__nav {
+  @include vp-1023 {
+    margin: 0;
+    justify-self: flex-end;
+    align-self: center;
+  }
+}
+
+.page-header__order-button {
+  margin: 5px 60px 0 0;
+  align-self: flex-start;
+
+  @include vp-1279 {
+    margin: 0 0 5px 0;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
 }

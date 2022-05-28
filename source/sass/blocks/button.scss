@@ -1,0 +1,32 @@
+.button {
+  display: inline-flex;
+  margin: 10px 0;
+  padding: 10px 10px;
+  color: $color-white-for-text;
+  border: 1px solid $color-white-for-text;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all $trans-default;
+  user-select: none;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  justify-content: center;
+  text-transform: uppercase;
+  min-height: 40px;
+  letter-spacing: 0.05em;
+
+  &--w-160 {
+    min-width: 160px;
+    width: 160px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-white-for-text;
+      color: $color-black;
+    }
+  }
+}

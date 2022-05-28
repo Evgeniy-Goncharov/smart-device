@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Учебный проект акселератор HTML-Academy">
-    <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <title>HTML-Academy Smart Device</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="page-header">
-        <div class="page-header__grid container">
-          <a class="page-header__logo logo">
-            <img src="img/svg/logo.svg" role="img" alt="Интернет магазин печатных плат" width="215"
-              height="55">
-          </a>
 
-          <nav class="page-header__nav main-nav main-nav--mobile-menu no-js" data-menu="mobile-menu">
-            <div class="main-nav__menu-wrapper" data-menu="mobile-menu-wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="mailto:info@sd.ru">
-                    <svg width="20" height="20">
-                      <use href="img/sprite_auto.svg#mail"></use>
-                    </svg>
-                    info@sd.ru
-                  </a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="tel:+74950005252">
-                    <svg width="20" height="20">
-                      <use href="img/sprite_auto.svg#phone"></use>
-                    </svg>
-                    +7 (495) 000 52 52
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Учебный проект акселератор HTML-Academy">
+  <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>HTML-Academy Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
-          <a class="button" href="#">Заказать звонок</a>
+<body>
+  <div class="wrapper">
+    <header class="page-header">
+      <div class="page-header__grid container">
+        <a class="page-header__logo logo" href="#">
+          <svg role="img" alt="Интернет магазин печатных плат" width="215" height="55">
+            <use class="logo__icon" href="img/sprite_auto.svg#logo"></use>
+            <use class="logo__icon--mobile" href="img/sprite_auto.svg#logo-mobile"></use>
+          </svg>
+        </a>
+
+        <nav class="page-header__nav main-nav main-nav--mobile-menu no-js" data-menu="mobile-menu">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="mailto:info@sd.ru">
+                <svg width="20" height="20">
+                  <use href="img/sprite_auto.svg#mail"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="tel:+74950005252">
+                <svg width="20" height="20">
+                  <use href="img/sprite_auto.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="page-header__order-button button button--w-160" href="#">Заказать звонок</a>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="container">
+
         </div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container"></div>
+    </footer>
+  </div>
 
-          </div>
-        </section>
-      </main>
-      <footer class="page-footer">
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+  <!-- Модалки -->
+  <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -87,7 +89,8 @@
       </div>
     </div> -->
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
