@@ -1,0 +1,35 @@
+.links {
+  padding-top: 8px;
+
+  @include vp-767 {
+    padding-left: 25px;
+    padding-right: 25px;
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+    border-bottom: 1px solid $color-special-for-border;
+    padding-top: 0px;
+  }
+}
+
+.links__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-bottom: 8px;
+  }
+}
+
+.links a {
+  @include vp-1023 {
+    max-width: 210px;
+    display: block;
+  }
+}

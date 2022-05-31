@@ -4,7 +4,7 @@
 
 .main-nav__list {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding: 0;
   list-style: none;
   display: grid;
@@ -15,11 +15,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    margin-bottom: 10px;
   }
 
   @include vp-767 {
+    align-self: flex-start;
     margin-bottom: 0;
+    margin-right: -25px;
   }
 }
 
@@ -33,6 +34,7 @@
   color: $color-white-for-text;
   position: relative;
   padding-left: 35px;
+  display: block;
 
   svg {
     width: 20px;
@@ -41,7 +43,8 @@
     transition: fill 0.2s ease-out;
     position: absolute;
     left: 0;
-    top: -1px;
+    top: 3px;
+    display: block;
   }
 
   @media (hover: hover),
@@ -76,6 +79,14 @@
 
       clip: rect(0 0 0 0);
       clip-path: inset(100%);
+    }
+  }
+
+  @include vp-767 {
+    padding: 5px 10px;
+
+    svg {
+      position: static;
     }
   }
 }

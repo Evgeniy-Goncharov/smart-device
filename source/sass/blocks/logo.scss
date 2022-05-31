@@ -1,7 +1,6 @@
 .logo {
-  width: 215px;
-  height: 55px;
   transition: opacity 0.2s ease-out;
+  display: inline-block;
 
   svg {
     display: block;
@@ -17,17 +16,14 @@
   }
 
   @include vp-767 {
-    width: auto;
-    height: auto;
-
-    svg {
+    &--adaptive svg {
       width: 35px;
       height: 35px;
     }
   }
 }
 
-.logo__icon {
+.logo--adaptive .logo__icon {
   &--mobile {
     display: none;
   }

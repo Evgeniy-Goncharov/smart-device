@@ -16,47 +16,154 @@
 <body>
   <div class="wrapper">
     <header class="page-header">
-      <div class="page-header__grid container">
-        <a class="page-header__logo logo" href="#">
-          <svg role="img" alt="Интернет магазин печатных плат" width="215" height="55">
-            <use class="logo__icon" href="img/sprite_auto.svg#logo"></use>
-            <use class="logo__icon--mobile" href="img/sprite_auto.svg#logo-mobile"></use>
-          </svg>
-        </a>
+      <div class="container">
+        <div class="page-header__grid">
+          <a class="page-header__logo logo--adaptive">
+            <svg role="img" alt="Интернет магазин печатных плат" width="215" height="55">
+              <use class="logo__icon" href="img/sprite_auto.svg#logo"></use>
+              <use class="logo__icon--mobile" href="img/sprite_auto.svg#logo-mobile"></use>
+            </svg>
+          </a>
 
-        <nav class="page-header__nav main-nav main-nav--mobile-menu no-js" data-menu="mobile-menu">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="mailto:info@sd.ru">
-                <svg width="20" height="20">
-                  <use href="img/sprite_auto.svg#mail"></use>
-                </svg>
-                <span>info@sd.ru</span>
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="tel:+74950005252">
-                <svg width="20" height="20">
-                  <use href="img/sprite_auto.svg#phone"></use>
-                </svg>
-                <span>+7 (495) 000 52 52</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="page-header__nav main-nav main-nav--mobile-menu no-js" data-menu="mobile-menu">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="mailto:info@sd.ru">
+                  <svg width="20" height="20">
+                    <use href="img/sprite_auto.svg#mail"></use>
+                  </svg>
+                  <span>info@sd.ru</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="tel:+74950005252">
+                  <svg width="20" height="20">
+                    <use href="img/sprite_auto.svg#phone"></use>
+                  </svg>
+                  <span>+7 (495) 000 52 52</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <a class="page-header__order-button button button--w-160" href="#">Заказать звонок</a>
+          <a class="page-header__order-button button button--w-160 button--text-top" href="#">Заказать звонок</a>
+        </div>
       </div>
     </header>
+
     <main>
       <section class="intro">
-        <div class="container">
+        <div class="intro__wrapper container">
+          <h1 class="intro__heading">Печатные платы</h1>
+          <p>
+            производство и монтаж, поставка комплектующих, блоков и модулей
+          </p>
 
+          <a class="intro__button button button--large button--w-410 button--mobile-full-width button--blue"
+            href="#feedback">
+            <span class="button__label button__label--mobile-hidden">Получить бесплатную консультацию</span>
+            <span class="button__label button__label--mobile-only">Бесплатная консультация</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <div class="container">
+          <ul class="features__list">
+            <li>
+              <article>
+                <h3>Оперативные сроки </h3>
+                <p>
+                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+                  доставлять
+                  заказы плат и комплектующих в самые короткие сроки
+                </p>
+                <svg width="35" height="35">
+                  <use href="img/sprite_auto.svg#stopwatch"></use>
+                </svg>
+              </article>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
+
     <footer class="page-footer">
-      <div class="container"></div>
+      <div class="page-footer__grid container">
+        <div class="page-footer__left-column">
+          <a class="page-footer__logo logo">
+            <svg role="img" alt="Интернет магазин печатных плат" width="215" height="55">
+              <use class="logo__icon" href="img/sprite_auto.svg#logo"></use>
+            </svg>
+          </a>
+
+          <section class="social">
+            <h2 class="visually-hidden">Мы в соцсетях</h2>
+            <ul class="social__list">
+              <li>
+                <a href="#">
+                  <svg role="img" width="30" height="30" alt="Facebook">
+                    <use href="img/sprite_auto.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <svg role="img" width="30" height="30" alt="Одноклассники">
+                    <use href="img/sprite_auto.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <svg role="img" width="30" height="30" alt="В контакте">
+                    <use href="img/sprite_auto.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="links accordion no-js" data-accordion="accordion-item">
+          <h2 class="section-heading section-heading--small accordion__title" data-accordion="accordion-button">Разделы
+            сайта</h2>
+
+          <div class="accordion__content">
+            <div class="links__grid">
+              <ul>
+                <li><a href="#">О Компаниии</a></li>
+                <li><a href="#">Продукты</a></li>
+                <li><a href="#">Производство печатных плат</a></li>
+                <li><a href="#">Монтаж печатных плат</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Комплектующие</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts accordion no-js" data-accordion="accordion-item">
+          <h2 class="section-heading section-heading--small accordion__title" data-accordion="accordion-button">Наш офис
+          </h2>
+          <div class="accordion__content">
+            <div class="contacts__content">
+              <p>г. Мытищи, Олимпийский проспект, д.10</p>
+              <ul>
+                <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+                <li><a href="tel:+79253895829">+7 (925) 389-58-29</a></li>
+                <li><a href="tel:+79253647813">+7 (925) 364-78-13</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </footer>
   </div>
 

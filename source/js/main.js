@@ -1,7 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initAccordion} from './modules/accordion.js';
+import {initScroll} from './modules/scroll';
 
 // ---------------------------------
+
+const noJSElements = document.querySelectorAll('.no-js');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -9,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  if (noJSElements) {
+    noJSElements.forEach((element) => element.classList.remove('no-js'));
+  }
 
   // Modules
   // ---------------------------------
@@ -16,7 +23,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    const breakpoint = window.matchMedia('(max-width:767px)');
+
+    const breakpointChecker = () => {
+      if (breakpoint.matches) {
+        initAccordion();
+      }
+    };
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
     initModals();
+    initScroll();
   });
 });
 

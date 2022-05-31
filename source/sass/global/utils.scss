@@ -75,3 +75,15 @@ body {
   background-color: $color-bg-white;
   color: $color-black;
 }
+
+.mobile-hidden {
+  @include vp-767 {
+    @include visually-hidden;
+  }
+}
+
+.only-mobile {
+  @media (min-width: $vp-768) {
+    @include visually-hidden;
+  }
+}
