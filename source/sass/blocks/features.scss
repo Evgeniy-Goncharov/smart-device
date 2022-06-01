@@ -1,0 +1,127 @@
+.features {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  font-size: 16px;
+  line-height: 135%;
+
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features__item {
+  border: 1px solid $color-grey;
+  padding: 84px 45px 40px;
+  position: relative;
+  transition: background-color $trans-default;
+  min-height: 300px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-blue;
+  }
+
+  &:hover {
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+
+    svg {
+      fill: $color-white-for-text;
+    }
+
+    h3 {
+      color: $color-white-for-text;
+    }
+
+    p {
+      color: $color-white-for-text;
+      padding: 0;
+      margin: 10px 0;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 78px;
+    padding-bottom: 20px;
+    min-height: 360px;
+  }
+
+  @include vp-767 {
+    padding: 65px 30px 35px;
+    min-height: 325px;
+
+    &--m-h-340 {
+      min-height: 340px;
+    }
+  }
+}
+
+.features__item h3 {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: $color-blue;
+  padding: 0;
+  margin: 12px 0 14px;
+
+  @include vp-1023 {
+    margin: 10px 0;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 140.62%;
+  }
+}
+
+.features__item p {
+  padding: 0;
+  margin: 10px 0;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 135%;
+  }
+}
+
+.features__item svg {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  width: 35px;
+  height: 35px;
+  fill: $color-blue;
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    left: 30px;
+  }
+}

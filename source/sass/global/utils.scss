@@ -74,6 +74,11 @@ body {
   line-height: 22px;
   background-color: $color-bg-white;
   color: $color-black;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .mobile-hidden {

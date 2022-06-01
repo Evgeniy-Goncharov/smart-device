@@ -18,6 +18,7 @@
   letter-spacing: 0.05em;
   align-items: center;
   width: 100%;
+  background-color: transparent;
 
   &--text-top {
     align-items: flex-start;
@@ -25,6 +26,10 @@
 
   &--w-160 {
     max-width: 160px;
+  }
+
+  &--w-180 {
+    max-width: 180px;
   }
 
   &--w-410 {
@@ -42,6 +47,15 @@
     background-color: $color-blue;
   }
 
+  &--blue-bordered {
+    border: 1px solid $color-blue;
+    color: $color-blue;
+  }
+
+  &--medium {
+    min-height: 45px;
+  }
+
   &--large {
     min-height: 55px;
     font-size: 18px;
@@ -49,6 +63,14 @@
   }
 
   @include vp-767 {
+    max-width: none;
+    padding: 5px;
+
+    &--medium {
+      min-height: 35px;
+      max-width: 160px;
+    }
+
     &--large {
       min-height: 40px;
       font-size: 14px;
@@ -58,7 +80,6 @@
 
   @media (hover: hover),
   screen and (min-width: 0\0) {
-
     &:hover,
     &:focus {
       background-color: $color-white-for-text;
@@ -69,6 +90,12 @@
     &--blue:focus {
      border-color: $color-white-for-text;
      color: $color-blue;
+    }
+
+    &--blue-bordered:hover,
+    &--blue-bordered:focus {
+      background-color: $color-blue;
+      color: $color-white-for-text;
     }
   }
 }
