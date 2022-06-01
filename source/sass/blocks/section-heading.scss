@@ -17,6 +17,10 @@
     letter-spacing: 0.05em;
   }
 
+  &--white {
+    color: $color-white-for-text;
+  }
+
   @include vp-767 {
     font-size: 28px;
     line-height: 39px;

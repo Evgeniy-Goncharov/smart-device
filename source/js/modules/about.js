@@ -20,13 +20,13 @@ function initAbout(isMobile) {
   function showContent() {
     aboutWrapper.style.height = `${contentHeight}px`;
     isOpen = true;
-    button.textContent = 'Скрыть';
+    button.textContent = 'Свернуть';
   }
 
   function hiddenContent() {
     aboutWrapper.style.height = `${defaultHeight}px`;
     isOpen = false;
-    button.textContent = 'Показать';
+    button.textContent = 'Подробнее';
   }
 
   function handleButtonClick() {
