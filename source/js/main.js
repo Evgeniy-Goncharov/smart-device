@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initAccordion} from './modules/accordion.js';
 import {initScroll} from './modules/scroll.js';
 import { initAbout } from './modules/about.js';
+import { initForm } from './modules/form';
 
 // ---------------------------------
 
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     breakpointChecker();
     initModals();
     initScroll();
+    initForm();
   });
 });
 

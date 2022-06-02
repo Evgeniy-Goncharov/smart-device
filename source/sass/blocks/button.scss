@@ -24,12 +24,21 @@
     align-items: flex-start;
   }
 
+  &--text-large {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
   &--w-160 {
     max-width: 160px;
   }
 
   &--w-180 {
     max-width: 180px;
+  }
+
+  &--w-265 {
+    max-width: 265px;
   }
 
   &--w-410 {
@@ -50,6 +59,11 @@
   &--blue-bordered {
     border: 1px solid $color-blue;
     color: $color-blue;
+  }
+
+  &--black {
+    border-color: $color-black-for-button;
+    background-color: $color-black-for-button;
   }
 
   &--medium {
@@ -76,10 +90,19 @@
       font-size: 14px;
       line-height: 16px;
     }
+
+    &--mobile-large {
+      min-height: 45px;
+    }
+
+    &--w-265 {
+      max-width: none;
+    }
   }
 
   @media (hover: hover),
   screen and (min-width: 0\0) {
+
     &:hover,
     &:focus {
       background-color: $color-white-for-text;
@@ -88,14 +111,20 @@
 
     &--blue:hover,
     &--blue:focus {
-     border-color: $color-white-for-text;
-     color: $color-blue;
+      border-color: $color-white-for-text;
+      color: $color-blue;
     }
 
     &--blue-bordered:hover,
     &--blue-bordered:focus {
       background-color: $color-blue;
       color: $color-white-for-text;
+    }
+
+    &--black:hover,
+    &--black:focus {
+      border-color: $color-default-white;
+      background-color: $color-default-white;
     }
   }
 }

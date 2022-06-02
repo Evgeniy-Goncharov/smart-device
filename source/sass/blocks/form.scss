@@ -1,0 +1,149 @@
+.form {
+  padding: 26px 10px 26px 8px;
+
+  @include vp-1023 {
+    padding: 16px 0;
+  }
+
+  @include vp-767 {
+    padding: 25px 0;
+  }
+}
+
+.form label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form input {
+  color: $color-white-for-text;
+}
+
+.form input:not(.visually-hidden) {
+  width: 100%;
+  border: none;
+  height: 50px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: $color-for-input;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form input:checked~span::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 4px;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
+  background: url("../../img/svg/tick.svg") no-repeat center;
+}
+
+.form input:focus~span {
+  outline: 1px solid $color-black-for-button;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: $color-default-white;
+}
+
+.form textarea {
+  background-color: $color-for-input;
+  border: none;
+  border-radius: 3px;
+  padding: 25px 15px;
+  width: 100%;
+  height: 155px;
+
+  @include vp-1023 {
+    padding: 31px 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    height: 180px;
+    padding: 23px 15px;
+  }
+}
+
+.form button {
+  margin: 0;
+}
+
+.form__field {
+  margin-bottom: 20px;
+
+  &--2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  &--gap-50 {
+    gap: 50px;
+  }
+
+  &--bottom-30 {
+    margin-bottom: 29px;
+  }
+
+  &--checkbox {
+    margin-top: 15px;
+    max-width: 320px;
+  }
+
+  &--checkbox label {
+    position: relative;
+    padding-left: 25px;
+    display: block;
+  }
+
+  &--checkbox span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    top: 7px;
+    left: 0;
+  }
+
+  @include vp-1023 {
+    gap: 30px;
+
+    &--checkbox {
+      margin-top: 11px;
+    }
+  }
+
+  @include vp-767 {
+    &--2-columns {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &--bottom-30 {
+      margin-bottom: 25px;
+    }
+
+    &--checkbox {
+      margin-top: 5px;
+    }
+
+    &--checkbox label {
+      padding-left: 30px;
+    }
+
+    &--checkbox span {
+      left: 5px;
+    }
+  }
+}

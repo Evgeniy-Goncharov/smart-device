@@ -93,10 +93,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// Swiper 7.4.1
-// import './vendor/swiper';
+eval("// Swiper 7.4.1\n// import './vendor/swiper';\n\n//# sourceURL=webpack:///./js/vendor.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vendor.min.js.map

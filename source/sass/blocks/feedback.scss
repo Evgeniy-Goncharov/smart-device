@@ -1,0 +1,59 @@
+.feedback {
+  background-color: $color-blue;
+  background-image: url("../../img/bg/airplane.png"), url("../../img/bg/polygon.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 245px right 1060px, top -73px right 950px;
+  background-size: 510px 285px, auto;
+  color: $color-default-white;
+
+  @include vp-1919 {
+    background-position: top 245px right 55vw, top -73px right 50vw;
+  }
+
+  @include vp-1023 {
+    background: $color-blue;
+  }
+}
+
+.feedback__wrapper {
+  padding-top: 163px;
+  padding-bottom: 182px;
+  width: 49%;
+  margin-left: auto;
+
+  @include vp-1023 {
+    width: auto;
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 23px;
+  }
+}
+
+.feedback__heading {
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 140.62%;
+  }
+}
+
+.feedback__form {
+  width: 50%;
+  margin-left: auto;
+}
+
+.feedback p {
+  margin: 10px 5px;
+  padding: 0;
+
+  @include vp-1023 {
+    margin: 8px 0;
+  }
+}
