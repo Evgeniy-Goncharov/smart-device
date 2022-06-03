@@ -1,30 +1,58 @@
-function initForm() {
-  const phoneInput = document.querySelector('[data-js=input-phone');
+const min = 14;
+const mask = /^[0-9]/;
 
-  phoneInput.addEventListener('focus', (evt) => {
-    evt.target.value = '+7(';
+function initForm(form) {
+  const phoneInput = form.querySelector('[data-js=input-phone');
+
+  function handleKeyDown(evt) {
+    if (!mask.test(evt.key) && evt.key !== 'Backspace') {
+      evt.preventDefault();
+    }
+
+    if (phoneInput.value.length === 3 && evt.key === 'Backspace') {
+      evt.preventDefault();
+    }
+
+    if (phoneInput.value.length === 7 && evt.key === 'Backspace') {
+      phoneInput.value = phoneInput.value.substr(0, 6);
+    }
+  }
+
+  phoneInput.addEventListener('focus', () => {
+    if (!phoneInput.value) {
+      phoneInput.value = '+7(';
+    }
+
+    phoneInput.addEventListener('keydown', handleKeyDown);
   });
 
-  phoneInput.addEventListener('input', (evt) =>{
-    if (evt.target.value.length === 6) {
+  phoneInput.addEventListener('input', () =>{
+    if (phoneInput.value.length === 6) {
       phoneInput.value += ')';
     }
+
+    if (phoneInput.value.length < min) {
+      phoneInput.setCustomValidity(`Ещё ${ min - phoneInput.value.length } симв.`);
+    } else {
+      phoneInput.setCustomValidity('');
+    }
+
+    phoneInput.reportValidity();
   });
 
-  document.addEventListener('keydown', (evt) => {
-    const pattern = /^[ 0-9]+$/;
-    if ((phoneInput.value.length === 3) && (evt.key === 'Backspace')) {
-      evt.preventDefault();
-    }
-
-    if ((evt.target.value.length === 7) && (evt.key === 'Backspace')) {
-      evt.target.value = phoneInput.value.substr(0, 5);
-    }
-
-    if (!pattern.test(evt.key)) {
-      evt.preventDefault();
-    }
-  });
+  phoneInput.addEventListener('blur', () => phoneInput.removeEventListener('keydown', handleKeyDown));
 }
 
-export {initForm};
+function initForms() {
+  const forms = document.querySelectorAll('[data-form');
+
+  if (forms) {
+    for (let form of forms) {
+      initForm(form);
+    }
+  }
+
+  // form.addEventListener('submit', (evt) => evt.preventDefault());
+}
+
+export {initForms};

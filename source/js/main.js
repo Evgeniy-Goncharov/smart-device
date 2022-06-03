@@ -2,8 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordion} from './modules/accordion.js';
 import {initScroll} from './modules/scroll.js';
-import { initAbout } from './modules/about.js';
-import { initForm } from './modules/form';
+import {initAbout} from './modules/about.js';
+import {initForms} from './modules/form';
 
 // ---------------------------------
 
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     breakpointChecker();
     initModals();
     initScroll();
-    initForm();
+    initForms();
   });
 });
 

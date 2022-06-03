@@ -764,6 +764,34 @@ body {
   padding: 26px 10px 26px 8px;
 }
 
+.form--w-420 {
+  width: 420px;
+}
+
+.form--padding-0 {
+  padding: 0;
+}
+
+.form__header {
+  margin-bottom: 37px;
+}
+
+.form h2 {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.form p {
+  padding: 0;
+  padding-right: 20px;
+  margin: 5px 0;
+}
+
 .form label {
   font-weight: 400;
   font-size: 14px;
@@ -858,19 +886,30 @@ body {
   gap: 50px;
 }
 
+.form__field--bottom-20 {
+  margin-bottom: 19px;
+}
+
 .form__field--bottom-30 {
   margin-bottom: 29px;
 }
 
 .form__field--checkbox {
   margin-top: 15px;
+}
+
+.form__field--checkbox-w-320 {
   max-width: 320px;
 }
 
 .form__field--checkbox label {
   position: relative;
-  padding-left: 25px;
   display: block;
+  padding-left: 34px;
+}
+
+.form__field--checkbox--w-320 label {
+  padding-left: 25px;
 }
 
 .form__field--checkbox span {
@@ -880,6 +919,11 @@ body {
   position: absolute;
   border: 1px solid #ffffff;
   border-radius: 2px;
+  left: 9px;
+  top: 0;
+}
+
+.form__field--checkbox--w-320 span {
   top: 7px;
   left: 0;
 }
@@ -1376,7 +1420,7 @@ body {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1425,15 +1469,16 @@ body {
 
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
+  width: 500px;
+  padding: 32px 40px 44px;
   background-color: #ffffff;
+  overflow: auto;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -1461,6 +1506,18 @@ body {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
+}
+
+.modal--blue {
+  color: #ffffff;
+}
+
+.modal--blue .modal__content {
+  background-color: #00b2ff;
+}
+
+.modal--blue svg {
+  fill: #ffffff;
 }
 
 .modal.is-active {
