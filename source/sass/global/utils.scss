@@ -20,8 +20,8 @@
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -63,7 +63,7 @@
 
 .no-transition {
   /* stylelint-disable-next-line */
-  transition: none !important;
+  transition: none;
 }
 
 body {
@@ -83,7 +83,7 @@ body {
 
 .mobile-hidden {
   @include vp-767 {
-    display:none;
+    display: none;
   }
 }
 

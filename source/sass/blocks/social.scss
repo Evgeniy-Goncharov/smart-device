@@ -26,14 +26,13 @@
   margin: 0 7px;
 }
 
-.social__list a  {
+.social__list a {
   padding: 5px;
   display: block;
   transition: opacity $trans-default;
 
   @media (hover: hover),
-  screen and (min-width: 0\0) {
-
+    screen and (min-width: 0\0) {
     &:hover,
     &:focus {
       opacity: 0.7;

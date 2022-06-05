@@ -9,7 +9,7 @@ function initAccordion() {
       if (button === target) {
         accordionItem.classList.toggle('is-open');
         if (accordionItem.classList.contains('is-open')) {
-          content.style.height = content.scrollHeight + 'px'
+          content.style.height = content.scrollHeight + 'px';
         } else {
           content.style.height = '0';
         }

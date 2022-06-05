@@ -23,7 +23,7 @@
 }
 
 .form h2 {
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -36,7 +36,6 @@
   padding: 0;
   padding-right: 20px;
   margin: 5px 0;
-
 }
 
 .form label {
@@ -60,7 +59,7 @@
   line-height: 22px;
 }
 
-.form input:checked~span::before {
+.form input:checked ~ span::before {
   content: "";
   position: absolute;
   width: 7px;
@@ -69,10 +68,10 @@
   bottom: 0;
   left: 2px;
   margin: auto;
-  background: url("../../img/svg/tick.svg") no-repeat center;
+  background: url("../img/svg/tick.svg") no-repeat center;
 }
 
-.form input:focus~span {
+.form input:focus ~ span {
   outline: 1px solid $color-black-for-button;
 }
 
@@ -141,7 +140,7 @@
     padding-left: 34px;
   }
 
-  &--checkbox--w-320 label {
+  &--checkbox-w-320 label {
     padding-left: 25px;
   }
 
@@ -156,7 +155,7 @@
     top: 0;
   }
 
-  &--checkbox--w-320 span {
+  &--checkbox-w-320 span {
     top: 7px;
     left: 0;
   }

@@ -2,7 +2,7 @@
   padding-top: 60px;
   padding-bottom: 120px;
   padding-left: 300px;
-  background-image: url("../../img/bg/2022.png");
+  background-image: url("../img/bg/2022.png");
   background-repeat: no-repeat;
   background-position: left 50px top 60px;
   background-size: 150px 320px;
@@ -19,6 +19,20 @@
     background: transparent;
     padding-top: 22px;
     padding-bottom: 80px;
+  }
+
+  @include retina {
+    @include desk {
+      background-image: url("../img/bg/2022@2x.png");
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/bg/2022@2x.png");
+    }
+
+    @include vp-767 {
+      background: transparent;
+    }
   }
 }
 
@@ -38,10 +52,6 @@
 .about p {
   margin: 0;
   padding: 0 0 20px;
-
-  @include vp-1023 {
-
-  }
 }
 
 .about__button {

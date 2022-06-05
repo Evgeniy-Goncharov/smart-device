@@ -38,9 +38,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     breakpoint.addListener(breakpointChecker);
     breakpointChecker();
-    initModals();
     initScroll();
     initForms();
+    initModals();
   });
 });
 

@@ -1,6 +1,6 @@
 .feedback {
   background-color: $color-blue;
-  background-image: url("../../img/bg/airplane.png"), url("../../img/bg/polygon.svg");
+  background-image: url("../img/bg/airplane.png"), url("../img/bg/polygon.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: top 245px right 1060px, top -73px right 950px;
   background-size: 510px 285px, auto;
@@ -12,6 +12,16 @@
 
   @include vp-1023 {
     background: $color-blue;
+  }
+
+  @include retina {
+    @include desk {
+      background-image: url("../img/bg/airplane@2x.png"), url("../img/bg/polygon.svg");
+    }
+
+    @include vp-1023 {
+      background: $color-blue;
+    }
   }
 }
 

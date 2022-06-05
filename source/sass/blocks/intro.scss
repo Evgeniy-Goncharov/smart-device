@@ -1,6 +1,6 @@
 .intro {
   min-height: 880px;
-  background: $color-intro-bg url("../../img/bg/intro-bg.jpg") no-repeat center;
+  // background: $color-intro-bg url("../img/bg/intro-bg.jpg") no-repeat center;
   background-size: cover;
   padding-top: 275px;
   padding-bottom: 50px;
@@ -24,24 +24,29 @@
   @include vp-1023 {
     padding-top: 180px;
     min-height: 640px;
-    background-image: url("../../img/bg/intro-bg--tablet.jpg");
+    // background-image: url("../img/bg/intro-bg--tablet.jpg");
   }
 
   @include vp-767 {
     padding-top: 142px;
     min-height: 560px;
     font-size: 14px;
+    // background-image: url("../img/bg/intro-bg--mobile.jpg");
   }
 
-  @include retina {
-    @include desk {
-      background-image: url("../../img/bg/intro-bg@2x.jpg");
-    }
+  // @include retina {
+  //   @include desk {
+  //     background-image: url("../img/bg/intro-bg@2x.jpg");
+  //   }
 
-    @include vp-1023 {
-      background-image: url("../../img/bg/intro-bg--tablet@2x.jpg");
-    }
-  }
+  //   @include vp-1023 {
+  //     background-image: url("../img/bg/intro-bg--tablet@2x.jpg");
+  //   }
+
+  //   @include vp-767 {
+  //     background-image: url("../img/bg/intro-bg--mobile@2x.jpg");
+  //   }
+  // }
 }
 
 .intro * {
@@ -58,7 +63,7 @@
 }
 
 .intro__heading {
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 80px;

@@ -10,12 +10,61 @@
   <link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>HTML-Academy Smart Device</title>
+  <style>
+    .intro {
+      background: #28435e url(img/bg/intro-bg.jpg) no-repeat center;
+      background-size: cover
+    }
+
+    @media (-webkit-min-device-pixel-ratio:1.5) and (min-width:1024px),
+    (-o-min-device-pixel-ratio:3/2) and (min-width:1024px),
+    (min-resolution:144dpi) and (min-width:1024px),
+    (min-resolution:1.5dppx) and (min-width:1024px) {
+      .intro {
+        background-image: url(img/bg/intro-bg@2x.jpg)
+      }
+    }
+
+    @media (max-width:1023px) {
+      .intro {
+        background-image: url(img/bg/intro-bg--tablet.jpg)
+      }
+    }
+
+    @media (-webkit-min-device-pixel-ratio:1.5) and (max-width:1023px),
+    (-o-min-device-pixel-ratio:3/2) and (max-width:1023px),
+    (min-resolution:144dpi) and (max-width:1023px),
+    (min-resolution:1.5dppx) and (max-width:1023px) {
+      .intro {
+        background-image: url(img/bg/intro-bg--tablet@2x.jpg)
+      }
+    }
+
+    @media (max-width:767px) {
+      .intro {
+        background-image: url(img/bg/intro-bg--mobile.jpg)
+      }
+    }
+
+    @media (-webkit-min-device-pixel-ratio:1.5) and (max-width:767px),
+    (-o-min-device-pixel-ratio:3/2) and (max-width:767px),
+    (min-resolution:144dpi) and (max-width:767px),
+    (min-resolution:1.5dppx) and (max-width:767px) {
+      .intro {
+        background-image: url(img/bg/intro-bg--mobile@2x.jpg)
+      }
+    }
+  </style>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="favicon/favicon.svg" rel="icon" type="image/svg+xml">
+  <link href="favicon/180.png" rel="apple-touch-icon">
+  <link href="manifest.webmanifest" rel="manifest" crossorigin="use-credentials">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="page-header">
+    <header class="page-header" data-fix-block>
       <div class="container">
         <div class="page-header__grid">
           <a class="page-header__logo logo--adaptive">
@@ -57,7 +106,7 @@
         <div class="intro__wrapper container">
           <h1 class="intro__heading">Печатные платы</h1>
           <p>
-            производство и монтаж, поставка комплектующих, блоков и модулей
+            производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей
           </p>
 
           <a class="intro__button button button--large button--w-410 button--mobile-full-width button--blue"
@@ -74,11 +123,10 @@
           <ul class="features__list">
             <li class="features__item features__item--m-h-340">
               <article>
-                <h3>Оперативные сроки </h3>
+                <h3>Оперативные сроки</h3>
                 <p>
-                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
-                  доставлять
-                  заказы плат и комплектующих в самые короткие сроки
+                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
+                  и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки
                 </p>
                 <svg width="35" height="35">
                   <use href="img/sprite_auto.svg#stopwatch"></use>
@@ -91,7 +139,7 @@
                 <h3>Крупные поставщики </h3>
                 <p>
                   Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                  Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+                  Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
                 </p>
                 <svg width="35" height="35">
                   <use href="img/sprite_auto.svg#providers"></use>
@@ -103,7 +151,7 @@
               <article>
                 <h3>Полная конфиденциальность</h3>
                 <p>
-                  По желанию клиента мы обеспечиваем полную конфеденциальность.
+                  По&nbsp;желанию клиента мы обеспечиваем полную конфеденциальность.
                 </p>
                 <svg width="35" height="35">
                   <use href="img/sprite_auto.svg#conf"></use>
@@ -115,8 +163,8 @@
               <article>
                 <h3>Персонализация стоимости</h3>
                 <p>
-                  Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-                  устраивает.
+                  Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену,
+                  которая Вас устраивает.
                 </p>
                 <svg width="35" height="35">
                   <use href="img/sprite_auto.svg#cost"></use>
@@ -133,24 +181,26 @@
           <div class="about__content-wrapper" data-js="about-wrapper">
             <div data-js="about-content">
               <p data-js="about-default-content">
-                Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
-                1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+                Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
+                технологии с 1997&nbsp;года. Выполняем срочные заказы и пилотные образцы до&nbsp;10&nbsp;дней.
               </p>
               <p data-js="about-default-content">
-                Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                Печатные&nbsp;платы и комплектующие Service Devices применяются на предприятиях Российских Железных
-                Дорог (РЖД),
-                РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-                светотехники России.
+                Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+                REFOND. Печатные&nbsp;платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
+                Российских
+                Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+                крупнейшие Производители светотехники России.
               </p>
               <p>
-                Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
-                продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
-                20 городов присутствия.
+                Smart&nbsp;Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+                1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
+                На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов
+                присутствия.
               </p>
               <p>
-                Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
-                Использование инновационных технологий помогает экономить деньги и время наших клиентов
+                Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+                внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших
+                клиентов
               </p>
             </div>
           </div>
@@ -163,25 +213,33 @@
 
       <section class="products">
         <div class="container">
-          <h2 class="section-heading section-heading--white mobile-hidden">Smart&nbsp;Device предлагает следующие товары
-            и услуги</h2>
-          <h2 class="products__heading section-heading section-heading--white only-mobile">Товары и услуги
-            Smart&nbsp;Device</h2>
+          <h2 class="section-heading section-heading--white mobile-hidden">
+            Smart&nbsp;Device предлагает следующие товары и&nbsp;услуги
+          </h2>
+          <h2 class="products__heading section-heading section-heading--white only-mobile">
+            Товары и&nbsp;услуги Smart&nbsp;Device
+          </h2>
           <ul class="products__list">
             <li class="products__item">
               <a href="#">
                 <h3>Производство печатных плат</h3>
                 <picture>
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/content/card-1--mobile.webp 1x, img/content/card-1--mobile@2x.webp 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/card-1--tablet.webp 1x, img/content/card-1--tablet@2x.webp 2x">
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
                   <source type="image/webp" srcset="img/content/card-1.webp 1x, img/content/card-1@2x.webp 2x">
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source media="(max-width: 767px)"
                     srcset="img/content/card-1--mobile.jpg 1x, img/content/card-1--mobile@2x.jpg 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source media="(max-width: 1023px)"
                     srcset="img/content/card-1--tablet.jpg 1x, img/content/card-1--tablet@2x.jpg 2x">
-                  <img src="img/content/card-1.jpg" srcset="img/content/card-1@2x.jpg 2x" width="350px" height="650px"
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
+                  <img src="img/content/card-1.jpg" srcset="img/content/card-1@2x.jpg 2x" width="350" height="650"
                     alt="Изготовим печатную плату любой сложности">
                 </picture>
               </a>
@@ -191,16 +249,22 @@
               <a href="#">
                 <h3>Монтаж печатных плат</h3>
                 <picture>
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/content/card-2--mobile.webp 1x, img/content/card-2--mobile@2x.webp 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/card-2--tablet.webp 1x, img/content/card-2--tablet@2x.webp 2x">
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
                   <source type="image/webp" srcset="img/content/card-2.webp 1x, img/content/card-2@2x.webp 2x">
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source media="(max-width: 767px)"
                     srcset="img/content/card-2--mobile.jpg 1x, img/content/card-2--mobile@2x.jpg 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source media="(max-width: 1023px)"
                     srcset="img/content/card-2--tablet.jpg 1x, img/content/card-2--tablet@2x.jpg 2x">
-                  <img src="img/content/card-2.jpg" srcset="img/content/card-2@2x.jpg 2x" width="350px" height="650px"
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
+                  <img src="img/content/card-2.jpg" srcset="img/content/card-2@2x.jpg 2x" width="350" height="650"
                     alt="Смонтируем печатную плату любой сложности">
                 </picture>
               </a>
@@ -210,16 +274,22 @@
               <a href="#">
                 <h3>Комплектующие для светотехники</h3>
                 <picture>
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/content/card-3--mobile.webp 1x, img/content/card-3--mobile@2x.webp 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/card-3--tablet.webp 1x, img/content/card-3--tablet@2x.webp 2x">
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
                   <source type="image/webp" srcset="img/content/card-3.webp 1x, img/content/card-3@2x.webp 2x">
+                  <!-- 1x: 270px x 250px; 2x: 540px x 500px -->
                   <source media="(max-width: 767px)"
                     srcset="img/content/card-3--mobile.jpg 1x, img/content/card-3--mobile@2x.jpg 2x">
+                  <!-- 1x: 670px x 250px; 2x: 1340px x 500px -->
                   <source media="(max-width: 1023px)"
                     srcset="img/content/card-3--tablet.jpg 1x, img/content/card-3--tablet@2x.jpg 2x">
-                  <img src="img/content/card-3.jpg" srcset="img/content/card-3@2x.jpg 2x" width="350px" height="650px"
+                  <!-- 1x: 350px x 650px; 2x: 700px x 1300px -->
+                  <img src="img/content/card-3.jpg" srcset="img/content/card-3@2x.jpg 2x" width="350" height="650"
                     alt="Комплектующие от именитых брендов">
                 </picture>
               </a>
@@ -231,8 +301,9 @@
       <section class="feedback" id="feedback">
         <div class="feedback__container container">
           <div class="feedback__wrapper">
-            <h2 class="feedback__heading section-heading section-heading--white">Остались вопросы? Задайте их нам!</h2>
-            <p>Мы проконсультируем Вас бесплатно</p>
+            <h2 class="feedback__heading section-heading section-heading--white">Остались вопросы? Задайте их&nbsp;нам!
+            </h2>
+            <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
 
             <form class="form" method="post" action="https://echo.htmlacademy.ru" data-form="feedback">
               <div class="form__field form__field--2-columns">
@@ -261,7 +332,7 @@
 
                 <div class="form__field form__field--checkbox form__field--checkbox-w-320">
                   <label>
-                    Я согласен на обработку персональных данных
+                    Я&nbsp;согласен на&nbsp;обработку персональных данных
                     <input class="visually-hidden" type="checkbox" name="personal" checked required>
                     <span></span>
                   </label>
@@ -314,13 +385,14 @@
 
         <section class="links accordion no-js" data-accordion="accordion-item">
           <h2 class="section-heading section-heading--small section-heading--white accordion__title"
-            data-accordion="accordion-button">Разделы
-            сайта</h2>
+            data-accordion="accordion-button">
+            Разделы сайта
+          </h2>
 
           <div class="accordion__content">
             <div class="links__grid">
               <ul>
-                <li><a href="#">О Компаниии</a></li>
+                <li><a href="#">О&nbsp;Компаниии</a></li>
                 <li><a href="#">Продукты</a></li>
                 <li><a href="#">Производство печатных плат</a></li>
                 <li><a href="#">Монтаж печатных плат</a></li>
@@ -358,16 +430,15 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <form class="form form--padding-0" action="https://echo.htmlacademy.ru" method="POST"
-          data-form="feedback">
+        <form class="form form--padding-0" action="https://echo.htmlacademy.ru" method="POST" data-form="feedback">
           <div class="form__header">
             <h2>Закажите звонок</h2>
-            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
           </div>
           <div class="form__field">
             <label>
               <span class="visually-hidden">Ваше имя</span>
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="name" placeholder="Имя" required data-focus>
             </label>
           </div>
 
@@ -391,7 +462,7 @@
 
           <div class="from__field form__field--checkbox form__field--checkbox-full-width">
             <label>
-              Я согласен на обработку персональных данных
+              Я&nbsp;согласен на&nbsp;обработку персональных данных
               <input class="visually-hidden" type="checkbox" name="personal" checked required>
               <span></span>
             </label>
@@ -405,20 +476,6 @@
       </div>
     </div>
   </aside>
-
-  <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

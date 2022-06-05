@@ -5,7 +5,7 @@ function initForm(form) {
   const phoneInput = form.querySelector('[data-js=input-phone');
 
   function handleKeyDown(evt) {
-    if (!mask.test(evt.key) && evt.key !== 'Backspace') {
+    if (!mask.test(evt.key) && evt.key !== 'Backspace' && evt.key !== 'Tab') {
       evt.preventDefault();
     }
 

@@ -52,8 +52,8 @@
     bottom: 0;
     width: 60px;
     height: 60px;
-    background: $color-blue url("../../img/svg/right.svg") no-repeat center;
-    border-radius: 3px 0px 0px 0px;
+    background: $color-blue url("../img/svg/right.svg") no-repeat center;
+    border-radius: 3px 0 0 0;
     z-index: 3;
     transition: transform $trans-default;
   }
@@ -90,7 +90,7 @@
 
 .products__item h3 {
   color: $color-default-white;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
