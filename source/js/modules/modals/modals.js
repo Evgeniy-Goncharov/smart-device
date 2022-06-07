@@ -160,13 +160,13 @@ export class Modals {
       this._openCallback();
     }
 
-    if (this._lockFocus) {
-      this._focusLock.lock('.modal.is-active', this._startFocus);
-    }
-
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
+      if (this._lockFocus) {
+        this._focusLock.lock('.modal.is-active', this._startFocus);
+      }
+
       document.addEventListener('click', this._documentClickHandler);
     }, this._eventTimeout);
   }
