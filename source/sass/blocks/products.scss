@@ -118,6 +118,11 @@
 .products__item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 650px;
   z-index: 1;
+  object-fit: cover;
+
+  @include vp-1023 {
+    height: 250px;
+  }
 }

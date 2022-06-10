@@ -906,6 +906,7 @@ body {
   position: relative;
   display: block;
   padding-left: 34px;
+  cursor: pointer;
 }
 
 .form__field--checkbox-w-320 label {
@@ -995,7 +996,8 @@ body {
   color: #f2f5f7;
   position: relative;
   padding-left: 35px;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .main-nav__link svg {
@@ -1255,15 +1257,17 @@ body {
 .products__item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 650px;
   z-index: 1;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .feedback {
   background-color: #00b2ff;
   background-image: url("../img/bg/airplane.png"), url("../img/bg/polygon.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: top 245px right 1060px, top -73px right 950px;
+  background-position: top 245px left 350px, top -73px left -7px;
   background-size: 510px 285px, auto;
   color: #ffffff;
 }
@@ -1762,6 +1766,10 @@ body {
     top: 17px;
     left: 45px;
     max-width: 150px;
+  }
+
+  .products__item img {
+    height: 250px;
   }
 
   .feedback {

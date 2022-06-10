@@ -18,6 +18,14 @@ function initForm(form) {
     }
   }
 
+  function handleFormSubmit(evt) {
+    if (phoneInput.value.length < min) {
+      evt.preventDefault();
+      phoneInput.setCustomValidity('Заполните поле');
+      phoneInput.reportValidity();
+    }
+  }
+
   phoneInput.addEventListener('focus', () => {
     if (!phoneInput.value) {
       phoneInput.value = '+7(';
@@ -41,6 +49,8 @@ function initForm(form) {
   });
 
   phoneInput.addEventListener('blur', () => phoneInput.removeEventListener('keydown', handleKeyDown));
+
+  form.addEventListener('submit', handleFormSubmit);
 }
 
 function initForms() {

@@ -34,7 +34,8 @@
   color: $color-white-for-text;
   position: relative;
   padding-left: 35px;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
 
   svg {
     width: 20px;
